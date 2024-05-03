@@ -80,12 +80,6 @@ namespace YKMoon.SDKTools.Editor
         
         private void ReCheck()
         {
-            //Unity.EditorCoroutines.Editor.EditorCoroutineUtility.StartCoroutine(ReCheckItor(), this);
-        //}
-        //private IEnumerator ReCheckItor()
-        //{
-        //    yield return null;
-        //    yield return null;
             switch(tabType) {
                 //case TabType.Setting:
 
