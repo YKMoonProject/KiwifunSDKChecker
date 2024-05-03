@@ -7,6 +7,7 @@ using System.Xml.Serialization;
 
 namespace YKMoon.SDKTools.Editor
 {
+    [System.Obsolete]
     public class DependencyCheckWindow : UEditorWindowBase
     {
         //[MenuItem("YKTools/DependencyCheckWindow")]
