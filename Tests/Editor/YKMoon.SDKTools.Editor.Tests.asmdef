@@ -1,0 +1,1 @@
+{"name":"YKMoon.SDKTools.Editor.Tests","references":["YKMoon.SDKTools","YKMoon.SDKTools.Editor"],"optionalUnityReferences":["TestAssemblies"],"includePlatforms":["Editor"],"excludePlatforms":[]}

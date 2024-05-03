@@ -1,0 +1,19 @@
+{
+    "name": "YKMoon.SDKTools.Editor",
+    "rootNamespace": "YKMoon.SDKTools.Editor",
+    "references": [
+        "GUID:60f9f4a65c0ba9845af63e3cb072b994",
+        "GUID:478a2357cc57436488a56e564b08d223"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

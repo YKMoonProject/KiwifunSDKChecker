@@ -1,0 +1,16 @@
+{
+  "name": "com.ykmoon.sdktools",
+  "version": "1.0.0",
+  "displayName": "YKSDKTools",
+  "description": "\u68c0\u6d4bSDK\u7528\u7684\u5de5\u5177.\nios\u5e73\u53f0\u4f1a\u81ea\u52a8\u6dfb\u52a0PushNotifications\u6743\u9650",
+  "unity": "2020.3",
+  "author": {
+    "name": "YKMoon",
+    "email": "",
+    "url": ""
+  },
+  "dependencies": {
+    "com.unity.editorcoroutines": "1.0.0"
+  },
+  "type": "tool"
+}
