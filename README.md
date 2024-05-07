@@ -1,2 +1,2 @@
 # KiwifunSDKChecker
-Test
+Test2
