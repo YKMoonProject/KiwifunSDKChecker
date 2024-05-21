@@ -80,6 +80,12 @@ namespace YKMoon.SDKTools.Editor
         
         private void ReCheck()
         {
+            //Unity.EditorCoroutines.Editor.EditorCoroutineUtility.StartCoroutine(ReCheckItor(), this);
+        //}
+        //private IEnumerator ReCheckItor()
+        //{
+        //    yield return null;
+        //    yield return null;
             switch(tabType) {
                 //case TabType.Setting:
 
@@ -113,10 +119,10 @@ namespace YKMoon.SDKTools.Editor
             CheckProcessRunner processor = new CheckProcessRunner();
             processor.AddProc(new CheckProcess_AndroidDependencies());
             processor.AddProc(new CheckProcess_AndroidGooggleServices());
-            //processor.AddProc(new CheckProcess_AndroidManifest());
-            //processor.AddProc(new CheckProcess_AndroidGradle());
-            //processor.AddProc(new CheckProcess_AndroidResolveSetting());
-            //processor.AddProc(new CheckProcess_AndroidProjectSettings());
+            processor.AddProc(new CheckProcess_AndroidManifest());
+            processor.AddProc(new CheckProcess_AndroidGradle());
+            processor.AddProc(new CheckProcess_AndroidResolveSetting());
+            processor.AddProc(new CheckProcess_AndroidProjectSettings());
             processor.RunCheck(OnCompleteAndroidCheck);
         }
 
@@ -161,7 +167,7 @@ namespace YKMoon.SDKTools.Editor
             CheckProcessRunner processor = new CheckProcessRunner();
             processor.AddProc(new CheckProcess_IOSDependencies());
             processor.AddProc(new CheckProcess_IOSResolveSetting());
-            //processor.AddProc(new CheckProcess_IOSProjectSettings());
+            processor.AddProc(new CheckProcess_IOSProjectSettings());
             processor.RunCheck(OnCompleteIOSCheck);
         }
         private List<ABaseProblem> iosProblems = new List<ABaseProblem>();

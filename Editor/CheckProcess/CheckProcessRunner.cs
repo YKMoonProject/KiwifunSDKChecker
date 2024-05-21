@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using Unity.EditorCoroutines.Editor;
 
 namespace YKMoon.SDKTools.Editor
 {
@@ -22,13 +23,24 @@ namespace YKMoon.SDKTools.Editor
         {
             this.onComplete = onComplete;
             allProblemList.Clear();
-            //ShowProgress(procName, "Checking", progress, maxProgress);
+            EditorCoroutineUtility.StartCoroutine(CheckItor(), this);
+        }
+
+        private IEnumerator CheckItor()
+        {
+            int progress = 0;
+            int maxProgress = procList.Count;
+
+            ShowProgress(procName, "Checking", progress, maxProgress);
+
             for(int i = 0; i < procList.Count; i++) {
                 var proc = procList[i];
                 proc.Check(OnProcEnd);
             }
-            //EditorUtility.ClearProgressBar();
+
+            EditorUtility.ClearProgressBar();
             onComplete?.Invoke(allProblemList);
+            yield break;
         }
 
         private void OnProcEnd(List<ABaseProblem> problems)

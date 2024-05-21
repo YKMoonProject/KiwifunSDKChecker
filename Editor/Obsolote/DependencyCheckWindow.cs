@@ -7,13 +7,11 @@ using System.Xml.Serialization;
 
 namespace YKMoon.SDKTools.Editor
 {
-    [System.Obsolete]
     public class DependencyCheckWindow : UEditorWindowBase
     {
-        //[MenuItem("YKTools/DependencyCheckWindow")]
+        [MenuItem("YKTools/DependencyCheckWindow")]
         public static void InitWindow()
         {
-            //test push
             var window = EditorWindow.GetWindow(typeof(DependencyCheckWindow));
             window.titleContent = new GUIContent("DependencyCheckWindow");
             window.Show();

@@ -41,6 +41,9 @@ namespace YKMoon.SDKTools.Editor
             FileUtil.CopyFileOrDirectory(src, dst);
             pbxProject.AddFile(target_name + "/" + file_name, file_name);
             pbxProject.AddBuildProperty(target_guid, "CODE_SIGN_ENTITLEMENTS", target_name + "/" + file_name);
+            pbxProject.SetBuildProperty(target_guid, "GCC_ENABLE_OBJC_EXCEPTIONS", "YES");
+            pbxProject.SetBuildProperty(target_guid, "GCC_ENABLE_CPP_EXCEPTIONS", "YES");
+            pbxProject.SetBuildProperty(target_guid, "CLANG_ENABLE_MODULES", "YES");
 
             pbxProject.WriteToFile(pbxProjectPath);
         }
